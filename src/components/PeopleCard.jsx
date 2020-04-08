@@ -6,7 +6,7 @@ const PeopleCard = ({ person }) => {
 			<div className="card my-2 shadow">
 				<div className="card-body justify-content-center">
 					<h4 className="card-title">{person.name}</h4>
-					<p className="card-text">Age: {person.age}</p>
+					<p className="card-text">{person.age}</p>
 				</div>
 			</div>
 		</article>

@@ -50,8 +50,8 @@ class App extends React.Component {
 					<section className="row my-3 flex-column align-items-center">
 						<img src="https://ghibliapi.herokuapp.com/images/logo.svg" alt="Studio Ghibli Logo" />
 						<div className="d-flex">
-							<button type="button" onClick={this.handleFilms} className="btn btn-warning shadow m-5">Films</button>
-							<button type="button" onClick={this.handlePeople} className="btn btn-warning shadow m-5">People</button>
+							<button type="button" onClick={this.handleFilms} className="btn btn-warning shadow m-3">Films</button>
+							<button type="button" onClick={this.handlePeople} className="btn btn-warning shadow m-3">People</button>
 						</div>
 					</section>
 				</main>

@@ -6,7 +6,7 @@ const FilmCard = ({ film }) => {
 			<div className="card my-2 shadow">
 				<div className="card-body justify-content-center">
 					<h4 className="card-title">{film.title}</h4>
-					<p className="card-text">{film.description}</p>
+					<p className="card-text">{film.text}</p>
 				</div>
 			</div>
 		</article>
