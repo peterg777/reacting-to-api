@@ -26,7 +26,7 @@ class App extends React.Component {
             return (
                 <main className="container">
                     <header className="d-flex">
-                        <button type="button" onClick={this.handleHomePage} className="btn btn-danger shadow my-3 mx-auto">Home Page</button>
+                        <button type="button" onClick={this.handleHomePage} className="btn btn-danger shadow my-3 mx-auto">Home</button>
                     </header>
                     <section className="row my-2 justify-content-center">
                         {this.state.films.map(film => <FilmCard key={film.id} film={film} />)}
