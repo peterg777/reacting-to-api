@@ -7,8 +7,8 @@ class App extends React.Component {
     state = {
         films: [],
         people: [],
-        isFilms: false,
-        isPeople: false,
+        loadFilms: false,
+        loadPeople: false,
     };
     componentDidMount() {
         fetch('https://ghibliapi.herokuapp.com/films')
@@ -18,12 +18,12 @@ class App extends React.Component {
             .then((res) => res.json())
             .then((people) => this.setState({ people }));
     }
-    handlePeople = () => this.setState({ isFilms: false, isPeople: true });
-    handleFilms = () => this.setState({ isFilms: true, isPeople: false });
-    handleHomePage = () => this.setState({ isFilms: false, isPeople: false });
+    handlePeople = () => this.setState({ loadFilms: false, loadPeople: true });
+    handleFilms = () => this.setState({ loadFilms: true, loadPeople: false });
+    handleHomePage = () => this.setState({ loadFilms: false, loadPeople: false });
 
     render() {
-        if (this.state.isFilms || this.state.isPeople) {
+        if (this.state.loadFilms || this.state.loadPeople) {
             return (
                 <main className="container">
                     <header className="d-flex">
@@ -34,7 +34,7 @@ class App extends React.Component {
                     </section>
                 </main>
             );
-        } else if (this.state.isPeople || this.state.isFilms) {
+        } else if (this.state.loadPeople || this.state.loadFilms) {
             return (
                 <main className="container">
                     <header className="d-flex">
