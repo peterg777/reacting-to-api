@@ -2,6 +2,7 @@ import React from 'react';
 import FilmCard from './components/FilmCard';
 import PeopleCard from './components/PeopleCard';
 
+
 class App extends React.Component {
     state = {
         films: [],
@@ -34,31 +35,31 @@ class App extends React.Component {
                 </main>
             );
         } else if (this.state.isPeople || this.state.isFilms) {
-			return (
-				<main className="container">
-					<header className="d-flex">
-						<button type="button" onClick={this.handleHomePage} className="btn btn-succcess shadow my-3 mx-auto">Home</button>
-					</header>
-					<section className="row my-2 justify-content-center">
-						{this.state.people.map(person => <PeopleCard key={person.id} person={person} />)}
-					</section>
-				</main>
-			);
-		} else {
-			return (
-				<main className="container">
-					<section className="row my-3 flex-column align-items-center">
-						<img src="https://ghibliapi.herokuapp.com/images/logo.svg" alt="Studio Ghibli Logo" />
-						<div className="d-flex">
-							<button type="button" onClick={this.handleFilms} className="btn btn-warning shadow m-3">Films</button>
-							<button type="button" onClick={this.handlePeople} className="btn btn-warning shadow m-3">People</button>
-						</div>
-					</section>
-				</main>
-			);
-		}
-	}
+            return (
+                <main className="container">
+                    <header className="d-flex">
+                        <button type="button" onClick={this.handleHomePage} className="btn btn-succcess shadow my-3 mx-auto">Home</button>
+                    </header>
+                    <section className="row my-2 justify-content-center">
+                        {this.state.people.map(people => <PeopleCard key={people.id} people={people} />)}
+                    </section>
+                </main>
+            );
+        } else {
+            return (
+                <main className="container">
+                    <section className="row my-3 flex-column align-items-center">
+                        <img src="https://ghibliapi.herokuapp.com/images/logo.svg" alt="Studio Ghibli Logo" />
+                        <div className="d-flex">
+                            <button type="button" onClick={this.handleFilms} className="btn btn-warning shadow m-3">Films</button>
+                            <button type="button" onClick={this.handlePeople} className="btn btn-warning shadow m-3">People</button>
+                        </div>
+                    </section>
+                </main>
+            );
+        }
+    }
 }
 
 
-        export default App;
+export default App;
